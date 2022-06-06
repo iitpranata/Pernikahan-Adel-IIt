@@ -20,7 +20,6 @@ body {
     .ww-home-page .ww-wedding-announcement .ww-announcement-container {
       max-width: 600px;
       text-align: center;
-      margin-left: 0;
       z-index: 999; }
     .ww-home-page .ww-wedding-announcement img {
       max-height: 350px;
