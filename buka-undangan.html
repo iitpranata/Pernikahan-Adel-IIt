@@ -197,7 +197,7 @@
 <div class="ww-section pt-4 pb-4 text-center" id="couple">
   <div class="h4 pt-5 pb-3">PETA LOKASI</div>
   <iframe class="container" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1257.625568967339!2d101.4413198292298!3d-2.144693659736899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe672370410fb261c!2zMsKwMDgnNDAuOSJTIDEwMcKwMjYnMzAuNyJF!5e1!3m2!1sid!2sid!4v1654364816873!5m2!1sid!2sid" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <a href="https://www.google.com/maps/place/-2.144688,+101.441871/@-2.1446687,101.4419471,21z/data=!3m1!1e3" class="btn btn-outline-danger btn-sm mt-3"><i class="fa fa-map-marker mr-1" aria-hidden="true"></i> Lihat Lokasi</a>
+  <a onclick="myNavFunc()" class="btn btn-outline-danger btn-sm mt-3"><i class="fa fa-map-marker mr-1" aria-hidden="true"></i> Lihat Lokasi</a>
 </div>
 <div class="ww-footer bg-light">
   <div class="container text-center py-4">
@@ -237,5 +237,16 @@
     <script src="scripts/aos.js?ver=1.1.0"></script>
     <script src="scripts/ekko-lightbox.min.js?ver=1.1.0"></script>
     <script src="scripts/main.js?ver=1.1.0"></script>
+    <script>
+        function myNavFunc(){
+    // If it's an iPhone..
+    if( (navigator.platform.indexOf("iPhone") != -1) 
+        || (navigator.platform.indexOf("iPod") != -1)
+        || (navigator.platform.indexOf("iPad") != -1))
+         window.open("maps://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=-2.144688,101.441871");
+    else
+         window.open("https://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=2.144688,101.441871");
+}
+    </script>
   </body>
 </html>
